@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=xyz.zeroonebn.jt400.Jt400AutoConfiguration
