@@ -23,9 +23,6 @@ dependencies {
     api("com.github.mvysny.karibudsl:karibu-dsl:$karibudslVersion")
     api("com.vaadin:vaadin-spring-boot-starter:$vaadinVersion")
     api("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
-//        implementation("org.jetbrains.kotlin:kotlin-reflect")
-//        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-//        runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion")
 }
