@@ -15,6 +15,9 @@ idea {
     }
 }
 
+description = "Security autoconfiguration"
+extra["url"] = "https://github.com/zeroonebn/zeroonebn/tree/main/security-spring-boot-starter"
+
 val springBootVersion: String by extra
 val vaadinVersion: String by extra
 val karibudslVersion: String by extra
@@ -29,12 +32,4 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
-    }
 }

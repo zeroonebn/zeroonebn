@@ -15,6 +15,9 @@ idea {
     }
 }
 
+description = "JT400 autoconfiguration"
+extra["url"] = "https://github.com/zeroonebn/zeroonebn/tree/main/jt400-spring-boot-starter"
+
 val springBootVersion: String by extra
 val jt400Version: String by extra
 
@@ -27,12 +30,4 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
-    }
 }
