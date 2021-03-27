@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  xyz.zeroonebn.security.SecurityConfiguration,\
+  xyz.zeroonebn.security.as400.As400SecurityAutoConfiguration

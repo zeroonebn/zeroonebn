@@ -1,5 +1,6 @@
 rootProject.name = "zeroonebn"
 include(
     "jt400-spring-boot-starter",
-    "vaadin-spring-boot-starter"
+    "vaadin-spring-boot-starter",
+    "security-spring-boot-starter"
 )
