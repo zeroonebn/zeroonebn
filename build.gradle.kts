@@ -16,6 +16,8 @@ subprojects {
     configure<JavaPluginExtension> {
         withJavadocJar()
         withSourcesJar()
+        sourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
+        targetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
     }
 
     configure<PublishingExtension> {
