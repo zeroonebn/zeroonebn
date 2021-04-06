@@ -1,9 +1,15 @@
+/*plugins {
+    `maven-publish`
+    signing
+}*/
+
 subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
+    apply(plugin = "org.gradle.signing")
 
     group = "xyz.zeroonebn"
-    version = "0.0.1"
+    version = "0.0.2-SNAPSHOT"
 
     extra["springBootVersion"] = "2.4.4"
     extra["jt400Version"] = "10.5"
@@ -20,6 +26,16 @@ subprojects {
         targetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
     }
 
+    configure<SigningExtension> {
+        afterEvaluate {
+            isRequired = isReleaseVersion
+            sign((this.extensions["publishing"] as PublishingExtension).publications["mavenJava"])
+        }
+
+    }
+/*    signing {
+        sign(publishing.publications["mavenJava"])
+    }*/
     configure<PublishingExtension> {
         publications {
             repositories {
@@ -37,6 +53,7 @@ subprojects {
                 pom {
                     afterEvaluate {
                         val url: String by extra;
+                        this@pom.name.set(name)
                         this@pom.description.set(description)
                         this@pom.url.set(url)
                     }
