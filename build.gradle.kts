@@ -13,7 +13,7 @@ subprojects {
 
     extra["springBootVersion"] = "2.4.4"
     extra["jt400Version"] = "10.5"
-    extra["vaadinVersion"] = "14.5.0"
+    extra["vaadinVersion"] = "14.5.1"
     extra["karibudslVersion"] = "1.0.4"
 
     val isReleaseVersion = !version.toString().endsWith("SNAPSHOT")
