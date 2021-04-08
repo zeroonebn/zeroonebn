@@ -40,11 +40,15 @@ subprojects {
         publications {
             repositories {
                 maven {
-                    url = uri(if (isReleaseVersion) "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-                    else "https://s01.oss.sonatype.org/content/repositories/snapshots/")
+                    url = uri(
+                        if (isReleaseVersion) "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+                        else "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+                    )
                     credentials {
-                        username = if (hasProperty("ossrhUsername")) properties["ossrhUsername"].toString() else "Unknown user"
-                        password = if (hasProperty("ossrhPassword")) properties["ossrhPassword"].toString() else "Unknown password"
+                        username =
+                            if (hasProperty("ossrhUsername")) properties["ossrhUsername"].toString() else "Unknown user"
+                        password =
+                            if (hasProperty("ossrhPassword")) properties["ossrhPassword"].toString() else "Unknown password"
                     }
                 }
             }
